@@ -5,8 +5,8 @@ RUN apt install git curl python3-pip ffmpeg -y
 
 RUN cd /
 RUN git clone https://github.com/hitokizzy/Plugins2
-RUN cd MUSIC-VC
-WORKDIR /MUSIC-VC
+RUN cd Plugins2
+WORKDIR /Plugins2
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -U -r requirements.txt
