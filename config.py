@@ -25,9 +25,9 @@ load_dotenv()
 
 class Config:
     def __init__(self) -> None:
-        self.API_ID: str = os.environ.get("API_ID", None) or "7055975"
-        self.API_HASH: str = os.environ.get("API_HASH", None) or "b5a46009c73889abf90fdcff928e4532"
-        self.SESSION: str = os.environ.get("PYROGRAM_SESSION", None) or "BQB2Imr63SjPpo4o1B1DravxYUQk6bnLhu0aCfUmUwKfd-A5AfCZ4lBXcfPfo5PltmKp9JyiKjuhwhuuEKqdIcGGxtCcdk6wRChAD1PeSaCS8I6PPrFoZRmSqLS2sL6L_Lm6EXbyNLGdXbAYNiyUTPYijtLY6JsGFEXCgPLG4PbVI87whqg1W8KLHwvDl45W5qtBosfAzR4T5TKjUStFTUppL4Tg58L6j1G5bnmfxDSrwLdZXTxVWksZJySGSfubW0bo3eHzGMEMhRHlR4x5gIuurLzyZVxVx2fAIRmFI-Wc9qxZtQ_kFEFRbLUrzOHtLem4zCVSoBe4KfdPT0UtiM2jfCT8RgA"
+        self.API_ID: str = os.environ.get("API_ID", None) or ""
+        self.API_HASH: str = os.environ.get("API_HASH", None) or ""
+        self.SESSION: str = os.environ.get("PYROGRAM_SESSION", None) or ""
         self.SUDOERS: list = [
             int(id) for id in os.environ.get("SUDOERS", "2082798662").split() if id.isnumeric()
         ]
