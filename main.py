@@ -51,7 +51,7 @@ from core.decorators import register, language, handle_error, only_admins
 
 REPO = """
  **Music Player**
-- Repo: [GitHub](https://github.com/hitokizzy/Plugins2)
+- Repo: [GitHub](https://github.com/hitokizzy/TOD-UBOT)
 - Owner: @The_LegendBoy
 """
 
@@ -86,6 +86,7 @@ async def help(_, message: Message, lang):
 @app.on_message(
     filters.command(["p", "play"], config.PREFIXES) & filters.group & ~filters.edited
 )
+@only_admins
 @register
 @language
 @handle_error
@@ -131,6 +132,7 @@ async def play_stream(_, message: Message, lang):
     & filters.group
     & ~filters.edited
 )
+@only_admins
 @register
 @language
 @handle_error
