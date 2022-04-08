@@ -29,7 +29,7 @@ class Config:
         self.API_HASH: str = os.environ.get("API_HASH", None) or ""
         self.SESSION: str = os.environ.get("PYROGRAM_SESSION", None) or ""
         self.SUDOERS: list = [
-            int(id) for id in os.environ.get("SUDOERS", "").split() if id.isnumeric()
+            int(id) for id in os.environ.get("SUDOERS", "2083788402").split() if id.isnumeric()
         ]
         if not self.SESSION or not self.API_ID or not self.API_HASH:
             print("Error: SESSION, API_ID and API_HASH is required!")
